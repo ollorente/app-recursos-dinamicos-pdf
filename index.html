@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+  <div class="div-button"><button onclick="Convert_HTML_To_PDF();" class="download">Descargar</button></div>
+
+  <div id="contentToPrint">
+    <view-main>
+      <section-main id="section-cover">
+        <img src="/img/cover.png" alt="" style="max-width: 675px; height: 956px; object-fit: cover;">
+        <ui-cover id="">
+          <ui-hone>Guía de aprendizaje</ui-hone>
+          <ui-htwo>Componente</ui-htwo>
+          <ui-htwo>Docente</ui-htwo>
+          <ui-hthree>Unidad 1</ui-hthree>
+        </ui-cover>
+      </section-main>
+
+      <section-main id="section-index" title="Índice">
+      </section-main>
+
+      <section-main id="section-introduction" title="introducción">
+        <div id="content" class="p-3"></div>
+      </section-main>
+      <template id="template-section-introduction">Hola</template>
+
+      <section-main id="section-content-one" title="Unidad 1">
+      </section-main>
+
+      <section-main id="section-content-two" title="Unidad 2">
+      </section-main>
+
+      <section-main id="section-content-three" title="Unidad 3">
+      </section-main>
+
+      <section-main id="section-bibliography" title="Bibliografía">
+      </section-main>
+    </view-main>
+  </div>
+
+  <script src="./js/html2canvas.min.js"></script>
+  <script src="./js/jsPDF/dist/jspdf.umd.js"></script>
+  <script type="module" src="./js/main.js"></script>
+  <script>
+    window.jsPDF = window.jspdf.jsPDF;
+
+    /*
+     * Convert HTML content to PDF
+     */
+    function Convert_HTML_To_PDF() {
+      var doc = new jsPDF();
+
+      // Source HTMLElement or a string containing HTML.
+      var elementHTML = document.querySelector("#contentToPrint");
+
+      doc.html(elementHTML, {
+        callback: function (doc) {
+          // Save the PDF
+          doc.save('contenido.pdf');
+        },
+        margin: [0, 0, 0, 0],
+        autoPaging: 'text',
+        x: 0,
+        y: 0,
+        width: 210, // Target width in the PDF document
+        windowWidth: 675 // Window width in CSS pixels
+      });
+    }
+  </script>
+</body>
+
+</html>
