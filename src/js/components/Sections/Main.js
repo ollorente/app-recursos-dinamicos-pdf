@@ -1,7 +1,7 @@
 const sectionMain = document.createElement("template")
 sectionMain.innerHTML = `
 <style>
-  @import url("/css/styles.css");
+  @import url("./css/styles.css");
 
   section {
     border-top: solid 0pX #ddd;

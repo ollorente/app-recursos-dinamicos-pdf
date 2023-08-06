@@ -1,7 +1,7 @@
 const uiHThree = document.createElement("template")
 uiHThree.innerHTML = `
 <style>
-  @import url("/css/styles.css");
+  @import url("./css/styles.css");
 
   h3 {
     color: #fff;
