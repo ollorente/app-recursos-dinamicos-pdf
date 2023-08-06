@@ -1,5 +1,5 @@
 export const getComponents = async () => {
-  return await fetch(`./../db.json`)
+  return await fetch(`./../../db.json`)
     .then(response => response.json())
     .then(async json => {
       const items = await json.ovas
@@ -8,7 +8,7 @@ export const getComponents = async () => {
 }
 
 export const getComponent = async (id) => {
-  return await fetch(`./../db.json`)
+  return await fetch(`./../../db.json`)
     .then(response => response.json())
     .then(async json => {
       const items = await json.ovas

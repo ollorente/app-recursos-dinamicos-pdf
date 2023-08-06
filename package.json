@@ -1,0 +1,11 @@
+{
+  "name": "app-recursos-dinamicos-pdf",
+  "private": true,
+  "homepage": "http://ollorente.github.io/app-recursos-dinamicos-pdf",
+  "scripts": {
+    "deploy": "gh-pages -d src"
+  },
+  "devDependencies": {
+    "gh-pages": "5.0.0"
+  }
+}
