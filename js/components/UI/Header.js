@@ -1,10 +1,10 @@
 const uiHeader = document.createElement("template")
 uiHeader.innerHTML = `
 <style>
-  @import url("/css/styles.css");
+  @import url("./css/styles.css");
 
   header {
-    background: url("/img/header.png") no-repeat;
+    background: url("./img/header.png") no-repeat;
     background-size: cover;
     height: 5rem;
     padding: 2rem 0;

@@ -1,7 +1,7 @@
 const uiHOne = document.createElement("template")
 uiHOne.innerHTML = `
 <style>
-  @import url("/css/styles.css");
+  @import url("./css/styles.css");
 
   h1 {
     color: #1c355e;

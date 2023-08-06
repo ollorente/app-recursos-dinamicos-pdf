@@ -1,12 +1,12 @@
 const uiCover = document.createElement("template")
 uiCover.innerHTML = `
 <style>
-  @import url("/css/styles.css");
+  @import url("./css/styles.css");
 
   div {
     background: rgb(25,178,181);
     background: linear-gradient(208deg, rgba(25,178,181,1) 0%, rgba(29,53,96,1) 67%, rgba(29,53,96,1) 100%);
-    background: url("/img/cover.png") no-repeat;
+    background: url("./img/cover.png") no-repeat;
     background-size: cover;
     min-height: 953px;
     width: 100%;

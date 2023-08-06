@@ -1,7 +1,7 @@
 const viewMain = document.createElement("template")
 viewMain.innerHTML = `
 <style>
-  @import url("/css/styles.css");
+  @import url("./css/styles.css");
 
   main {
     border: solid 0pX #fff;
